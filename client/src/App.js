@@ -10,22 +10,22 @@ const App = () => {
   const [web3, setWeb3] = useState(null);
   const [hasLoaded, setHasLoaded] = useState(false);
   const [accounts, setAccounts] = useState(null);
-  const [contract, setContract] = useState(null);
+  const [instanceContract, setInstanceContract] = useState(null);
 
   useEffect(() => {
     async function setContract() {
-      const web3 = await getWeb3()
+      const web3 = await getWeb3();
       const accounts = await web3.eth.getAccounts();
       const instance = new web3.eth.Contract(
         SimpleStorageContract.abi,
         "0x5A20Ef34b97657baFbFc9020E35780ced8beBe32"
       );
-
       setAccounts(accounts);
       setWeb3(web3);
-      setContract(instance);
+      setInstanceContract(instance);
 
-      const response = await contract.methods.get().call();
+      // TODO: understand why we can't use instanceContract here
+      const response = await instance.methods.get().call();
       setStorageValue(response);
       setHasLoaded(true);
     }
@@ -34,8 +34,10 @@ const App = () => {
 
   const handleSend = async (event) => {
     event.preventDefault();
-    await contract.methods.set(transactionValue).send({ from: accounts[0] });
-    const response = await contract.methods.get().call();
+    await instanceContract.methods
+      .set(transactionValue)
+      .send({ from: accounts[0] });
+    const response = await instanceContract.methods.get().call();
     setStorageValue(response);
   };
 
