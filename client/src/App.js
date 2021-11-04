@@ -47,8 +47,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Good to Go!</h1>
-      <p>Your Truffle Box is installed and ready.</p>
+      <h1>Voting App</h1>
       <p>Your account: {hasLoaded ? accounts[0] : "loading"}</p>
       <h2>Smart Contract Example</h2>
       <p>
