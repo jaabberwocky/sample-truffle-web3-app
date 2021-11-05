@@ -22,6 +22,13 @@ const App = () => {
       setAccounts(accounts);
       setInstanceContract(instance);
 
+      // set account changed event
+      window.ethereum.on("accountsChanged", async function () {
+        const newAccounts = await web3.eth.getAccounts();
+        console.log("newAccounts:", newAccounts[0]);
+        setAccounts(newAccounts)
+      });
+
       // TODO: understand why we can't use instanceContract here
       const response = await instance.methods.get().call();
       setStorageValue(response);
@@ -37,6 +44,7 @@ const App = () => {
       .send({ from: accounts[0] });
     const response = await instanceContract.methods.get().call();
     setStorageValue(response);
+    setTransactionValue(0);
   };
 
   const handleValueChange = (event) => {
