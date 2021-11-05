@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
 
@@ -7,6 +7,7 @@ import "./App.css";
 const App = () => {
   const [storageValue, setStorageValue] = useState(0);
   const [transactionValue, setTransactionValue] = useState(0);
+  const [web3, setWeb3] = useState(null);
   const [hasLoaded, setHasLoaded] = useState(false);
   const [accounts, setAccounts] = useState(null);
   const [instanceContract, setInstanceContract] = useState(null);
@@ -20,6 +21,7 @@ const App = () => {
         "0x5A20Ef34b97657baFbFc9020E35780ced8beBe32"
       );
       setAccounts(accounts);
+      setWeb3(web3);
       setInstanceContract(instance);
 
       // TODO: understand why we can't use instanceContract here
