@@ -2,13 +2,22 @@
 pragma solidity >=0.4.21 <0.7.0;
 
 contract SimpleStorage {
-  uint storedData;
+    uint256 storedData;
+    mapping(address => uint256) balance;
 
-  function set(uint x) public {
-    storedData = x;
-  }
+    function set(uint256 x) public {
+        storedData = x;
+    }
 
-  function get() public view returns (uint) {
-    return storedData;
-  }
+    function get() public view returns (uint256) {
+        return storedData;
+    }
+
+    function request(uint256 amount) external {
+        balance[msg.sender] = balance[msg.sender] + amount;
+    }
+
+    function getBalance() external view returns (uint256) {
+        return balance[msg.sender];
+    }
 }
