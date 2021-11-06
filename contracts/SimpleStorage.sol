@@ -3,7 +3,7 @@ pragma solidity >=0.4.21 <0.7.0;
 
 contract SimpleStorage {
     uint256 storedData;
-    mapping(address => uint256) balance;
+    mapping(address => uint256) public balance;
 
     function set(uint256 x) public {
         storedData = x;
