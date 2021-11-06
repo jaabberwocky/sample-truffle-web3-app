@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
 
@@ -22,7 +22,6 @@ const App = () => {
         "0x5A20Ef34b97657baFbFc9020E35780ced8beBe32"
       );
       setAccounts(accounts);
-      setWeb3(web3);
       setInstanceContract(instance);
 
       // set account changed event
