@@ -69,7 +69,13 @@
     },
     {
       "constant": true,
-      "inputs": [],
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_addr",
+          "type": "address"
+        }
+      ],
       "name": "getBalance",
       "outputs": [
         {
@@ -83,21 +89,21 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"request\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x0351d79b365eadf1898ff8e0777e8f521bd69688b45394bc58a130878860213b\",\"urls\":[\"bzz-raw://cfde78f393e55a07fc63475659188e40d8494c4358e1b1a5876da03cf6754f09\",\"dweb:/ipfs/Qmb9Uk8wfMaxEyoKi9uJss46qTJDEdchYHzAJBjceQ5doC\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061027b806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806312065fe01461005c57806360fe47b11461007a5780636d4ce63c146100a8578063d845a4b3146100c6578063e3d670d7146100f4575b600080fd5b61006461014c565b6040518082815260200191505060405180910390f35b6100a66004803603602081101561009057600080fd5b8101908080359060200190929190505050610193565b005b6100b061019d565b6040518082815260200191505060405180910390f35b6100f2600480360360208110156100dc57600080fd5b81019080803590602001909291905050506101a6565b005b6101366004803603602081101561010a57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061022e565b6040518082815260200191505060405180910390f35b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905090565b8060008190555050565b60008054905090565b80600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205401600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555050565b6001602052806000526040600020600091509050548156fea265627a7a7231582088e469e60d83e5a5bdb2ce87b8d11e13aeccb5b21eab183e40cb6c36d6bed97a64736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806312065fe01461005c57806360fe47b11461007a5780636d4ce63c146100a8578063d845a4b3146100c6578063e3d670d7146100f4575b600080fd5b61006461014c565b6040518082815260200191505060405180910390f35b6100a66004803603602081101561009057600080fd5b8101908080359060200190929190505050610193565b005b6100b061019d565b6040518082815260200191505060405180910390f35b6100f2600480360360208110156100dc57600080fd5b81019080803590602001909291905050506101a6565b005b6101366004803603602081101561010a57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061022e565b6040518082815260200191505060405180910390f35b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905090565b8060008190555050565b60008054905090565b80600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205401600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555050565b6001602052806000526040600020600091509050548156fea265627a7a7231582088e469e60d83e5a5bdb2ce87b8d11e13aeccb5b21eab183e40cb6c36d6bed97a64736f6c63430005100032",
-  "sourceMap": "66:469:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:469:0;;;;;;;",
-  "deployedSourceMap": "66:469:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:469:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;436:97;;;:::i;:::-;;;;;;;;;;;;;;;;;;;168:62;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;168:62:0;;;;;;;;;;;;;;;;;:::i;:::-;;236:79;;;:::i;:::-;;;;;;;;;;;;;;;;;;;321:109;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;321:109:0;;;;;;;;;;;;;;;;;:::i;:::-;;119:42;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;119:42:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;436:97;481:7;507;:19;515:10;507:19;;;;;;;;;;;;;;;;500:26;;436:97;:::o;168:62::-;222:1;209:10;:14;;;;168:62;:::o;236:79::-;272:7;298:10;;291:17;;236:79;:::o;321:109::-;417:6;395:7;:19;403:10;395:19;;;;;;;;;;;;;;;;:28;373:7;:19;381:10;373:19;;;;;;;;;;;;;;;:50;;;;321:109;:::o;119:42::-;;;;;;;;;;;;;;;;;:::o",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.7.0;\n\ncontract SimpleStorage {\n    uint256 storedData;\n    mapping(address => uint256) public balance;\n\n    function set(uint256 x) public {\n        storedData = x;\n    }\n\n    function get() public view returns (uint256) {\n        return storedData;\n    }\n\n    function request(uint256 amount) external {\n        balance[msg.sender] = balance[msg.sender] + amount;\n    }\n\n    function getBalance() external view returns (uint256) {\n        return balance[msg.sender];\n    }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_addr\",\"type\":\"address\"}],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"request\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x3681a88a40ab2d0a6c29e94471661dae2313140e5ce9f5dec4ec5e9e9f6aa6c9\",\"urls\":[\"bzz-raw://6ee83d6a5188bb7801b6f42e6d16d074b28c6f87a3f81d4cee70abb86af91839\",\"dweb:/ipfs/QmUaZDc2GTktZ3wCw6DsfxMfK2NEA7SrWy7fZQtUUxBuZG\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102b7806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806360fe47b11461005c5780636d4ce63c1461008a578063d845a4b3146100a8578063e3d670d7146100d6578063f8b2cb4f1461012e575b600080fd5b6100886004803603602081101561007257600080fd5b8101908080359060200190929190505050610186565b005b610092610190565b6040518082815260200191505060405180910390f35b6100d4600480360360208110156100be57600080fd5b8101908080359060200190929190505050610199565b005b610118600480360360208110156100ec57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610221565b6040518082815260200191505060405180910390f35b6101706004803603602081101561014457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610239565b6040518082815260200191505060405180910390f35b8060008190555050565b60008054905090565b80600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205401600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555050565b60016020528060005260406000206000915090505481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905091905056fea265627a7a72315820d3d45a7bedeb4c1b4c1a81362b252c3a50431b01a902d3affcc60a1104e26b6f64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806360fe47b11461005c5780636d4ce63c1461008a578063d845a4b3146100a8578063e3d670d7146100d6578063f8b2cb4f1461012e575b600080fd5b6100886004803603602081101561007257600080fd5b8101908080359060200190929190505050610186565b005b610092610190565b6040518082815260200191505060405180910390f35b6100d4600480360360208110156100be57600080fd5b8101908080359060200190929190505050610199565b005b610118600480360360208110156100ec57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610221565b6040518082815260200191505060405180910390f35b6101706004803603602081101561014457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610239565b6040518082815260200191505060405180910390f35b8060008190555050565b60008054905090565b80600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205401600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555050565b60016020528060005260406000206000915090505481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905091905056fea265627a7a72315820d3d45a7bedeb4c1b4c1a81362b252c3a50431b01a902d3affcc60a1104e26b6f64736f6c63430005100032",
+  "sourceMap": "66:477:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:477:0;;;;;;;",
+  "deployedSourceMap": "66:477:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:477:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;168:62;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;168:62:0;;;;;;;;;;;;;;;;;:::i;:::-;;236:79;;;:::i;:::-;;;;;;;;;;;;;;;;;;;321:109;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;321:109:0;;;;;;;;;;;;;;;;;:::i;:::-;;119:42;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;119:42:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;436:105;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;436:105:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;168:62;222:1;209:10;:14;;;;168:62;:::o;236:79::-;272:7;298:10;;291:17;;236:79;:::o;321:109::-;417:6;395:7;:19;403:10;395:19;;;;;;;;;;;;;;;;:28;373:7;:19;381:10;373:19;;;;;;;;;;;;;;;:50;;;;321:109;:::o;119:42::-;;;;;;;;;;;;;;;;;:::o;436:105::-;494:7;520;:14;528:5;520:14;;;;;;;;;;;;;;;;513:21;;436:105;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.7.0;\n\ncontract SimpleStorage {\n    uint256 storedData;\n    mapping(address => uint256) public balance;\n\n    function set(uint256 x) public {\n        storedData = x;\n    }\n\n    function get() public view returns (uint256) {\n        return storedData;\n    }\n\n    function request(uint256 amount) external {\n        balance[msg.sender] = balance[msg.sender] + amount;\n    }\n\n    function getBalance(address _addr) external view returns (uint256) {\n        return balance[_addr];\n    }\n}\n",
   "sourcePath": "/Users/tobias/Code/voting-dapp-v2/contracts/SimpleStorage.sol",
   "ast": {
     "absolutePath": "project:/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
-        55
+        56
       ]
     },
-    "id": 56,
+    "id": 57,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -120,9 +126,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 55,
+        "id": 56,
         "linearizedBaseContracts": [
-          55
+          56
         ],
         "name": "SimpleStorage",
         "nodeType": "ContractDefinition",
@@ -132,7 +138,7 @@
             "id": 3,
             "name": "storedData",
             "nodeType": "VariableDeclaration",
-            "scope": 55,
+            "scope": 56,
             "src": "95:18:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -158,7 +164,7 @@
             "id": 7,
             "name": "balance",
             "nodeType": "VariableDeclaration",
-            "scope": 55,
+            "scope": 56,
             "src": "119:42:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -298,7 +304,7 @@
               "parameters": [],
               "src": "199:0:0"
             },
-            "scope": 55,
+            "scope": 56,
             "src": "168:62:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -377,7 +383,7 @@
               ],
               "src": "271:9:0"
             },
-            "scope": 55,
+            "scope": 56,
             "src": "236:79:0",
             "stateMutability": "view",
             "superFunction": null,
@@ -421,7 +427,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 70,
+                          "referencedDeclaration": 71,
                           "src": "381:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -490,7 +496,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 70,
+                            "referencedDeclaration": 71,
                             "src": "403:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -601,7 +607,7 @@
               "parameters": [],
               "src": "363:0:0"
             },
-            "scope": 55,
+            "scope": 56,
             "src": "321:109:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -609,54 +615,38 @@
           },
           {
             "body": {
-              "id": 53,
+              "id": 54,
               "nodeType": "Block",
-              "src": "490:43:0",
+              "src": "503:38:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 48,
+                      "id": 50,
                       "name": "balance",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 7,
-                      "src": "507:7:0",
+                      "src": "520:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 51,
+                    "id": 52,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 49,
-                        "name": "msg",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 70,
-                        "src": "515:3:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_magic_message",
-                          "typeString": "msg"
-                        }
-                      },
-                      "id": 50,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "sender",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "515:10:0",
+                      "id": 51,
+                      "name": "_addr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 45,
+                      "src": "528:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
                       }
                     },
                     "isConstant": false,
@@ -664,43 +654,71 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "507:19:0",
+                    "src": "520:14:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 47,
-                  "id": 52,
+                  "functionReturnParameters": 49,
+                  "id": 53,
                   "nodeType": "Return",
-                  "src": "500:26:0"
+                  "src": "513:21:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 54,
+            "id": 55,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBalance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 44,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "455:2:0"
-            },
-            "returnParameters": {
-              "id": 47,
+              "id": 46,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 46,
+                  "id": 45,
+                  "name": "_addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55,
+                  "src": "456:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "456:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "455:15:0"
+            },
+            "returnParameters": {
+              "id": 49,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 54,
-                  "src": "481:7:0",
+                  "scope": 55,
+                  "src": "494:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -708,10 +726,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 45,
+                    "id": 47,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "481:7:0",
+                    "src": "494:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -721,27 +739,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "480:9:0"
+              "src": "493:9:0"
             },
-            "scope": 55,
-            "src": "436:97:0",
+            "scope": 56,
+            "src": "436:105:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 56,
-        "src": "66:469:0"
+        "scope": 57,
+        "src": "66:477:0"
       }
     ],
-    "src": "32:504:0"
+    "src": "32:512:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/SimpleStorage.sol",
       "exportedSymbols": {
         "SimpleStorage": [
-          55
+          56
         ]
       }
     },
@@ -774,17 +792,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            55
+            56
           ],
           "name": "SimpleStorage",
-          "scope": 56
+          "scope": 57
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "storedData",
-              "scope": 55,
+              "scope": 56,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -810,7 +828,7 @@
             "attributes": {
               "constant": false,
               "name": "balance",
-              "scope": 55,
+              "scope": 56,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(address => uint256)",
@@ -861,7 +879,7 @@
                 null
               ],
               "name": "set",
-              "scope": 55,
+              "scope": 56,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -984,7 +1002,7 @@
                 null
               ],
               "name": "get",
-              "scope": 55,
+              "scope": 56,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -1080,7 +1098,7 @@
                 null
               ],
               "name": "request",
-              "scope": 55,
+              "scope": 56,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1187,7 +1205,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 70,
+                                      "referencedDeclaration": 71,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1262,7 +1280,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 70,
+                                          "referencedDeclaration": 71,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -1329,22 +1347,45 @@
                 null
               ],
               "name": "getBalance",
-              "scope": 55,
+              "scope": 56,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "external"
             },
             "children": [
               {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 44,
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_addr",
+                      "scope": 55,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 44,
+                        "name": "ElementaryTypeName",
+                        "src": "456:7:0"
+                      }
+                    ],
+                    "id": 45,
+                    "name": "VariableDeclaration",
+                    "src": "456:13:0"
+                  }
+                ],
+                "id": 46,
                 "name": "ParameterList",
-                "src": "455:2:0"
+                "src": "455:15:0"
               },
               {
                 "children": [
@@ -1352,7 +1393,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 54,
+                      "scope": 55,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1365,25 +1406,25 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 45,
+                        "id": 47,
                         "name": "ElementaryTypeName",
-                        "src": "481:7:0"
+                        "src": "494:7:0"
                       }
                     ],
-                    "id": 46,
+                    "id": 48,
                     "name": "VariableDeclaration",
-                    "src": "481:7:0"
+                    "src": "494:7:0"
                   }
                 ],
-                "id": 47,
+                "id": 49,
                 "name": "ParameterList",
-                "src": "480:9:0"
+                "src": "493:9:0"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 47
+                      "functionReturnParameters": 49
                     },
                     "children": [
                       {
@@ -1406,70 +1447,53 @@
                               "type": "mapping(address => uint256)",
                               "value": "balance"
                             },
-                            "id": 48,
+                            "id": 50,
                             "name": "Identifier",
-                            "src": "507:7:0"
+                            "src": "520:7:0"
                           },
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": false,
-                              "lValueRequested": false,
-                              "member_name": "sender",
-                              "referencedDeclaration": null,
-                              "type": "address payable"
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 45,
+                              "type": "address",
+                              "value": "_addr"
                             },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 70,
-                                  "type": "msg",
-                                  "value": "msg"
-                                },
-                                "id": 49,
-                                "name": "Identifier",
-                                "src": "515:3:0"
-                              }
-                            ],
-                            "id": 50,
-                            "name": "MemberAccess",
-                            "src": "515:10:0"
+                            "id": 51,
+                            "name": "Identifier",
+                            "src": "528:5:0"
                           }
                         ],
-                        "id": 51,
+                        "id": 52,
                         "name": "IndexAccess",
-                        "src": "507:19:0"
+                        "src": "520:14:0"
                       }
                     ],
-                    "id": 52,
+                    "id": 53,
                     "name": "Return",
-                    "src": "500:26:0"
+                    "src": "513:21:0"
                   }
                 ],
-                "id": 53,
+                "id": 54,
                 "name": "Block",
-                "src": "490:43:0"
+                "src": "503:38:0"
               }
             ],
-            "id": 54,
+            "id": 55,
             "name": "FunctionDefinition",
-            "src": "436:97:0"
+            "src": "436:105:0"
           }
         ],
-        "id": 55,
+        "id": 56,
         "name": "ContractDefinition",
-        "src": "66:469:0"
+        "src": "66:477:0"
       }
     ],
-    "id": 56,
+    "id": 57,
     "name": "SourceUnit",
-    "src": "32:504:0"
+    "src": "32:512:0"
   },
   "compiler": {
     "name": "solc",
@@ -1480,11 +1504,11 @@
       "events": {},
       "links": {},
       "address": "0x5A20Ef34b97657baFbFc9020E35780ced8beBe32",
-      "transactionHash": "0x081bce880ce8369f334ab6d18a3daf21d16f4823b73a53fd3c710b77576c7d9a"
+      "transactionHash": "0x0336b8334ec4c4e197e7cf61da23cde115327d36ec7d89659c4fef3fb58f40e5"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-06T02:23:15.332Z",
+  "updatedAt": "2021-11-06T02:47:53.933Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
