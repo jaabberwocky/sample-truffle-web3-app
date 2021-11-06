@@ -34,7 +34,7 @@ const App = () => {
       // TODO: understand why we can't use instanceContract here
       const response = await instance.methods.get().call();
       setStorageValue(response);
-      const _balance = await instance.methods.balance(accounts[0]).call();
+      const _balance = await instance.methods.getBalance(accounts[0]).call();
       setBalance(_balance);
 
       setHasLoaded(true);
@@ -72,19 +72,18 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Voting App</h1>
+      <h1>Web3 App</h1>
       <p>Your account: {hasLoaded ? accounts[0] : "loading"}</p>
-      <h2>Smart Contract Example</h2>
+      <h2>Storage App</h2>
       <p>
-        If your contracts compiled and migrated successfully, below will show a
-        stored value of the contract.
+        App showcasing smart contract interaction
       </p>
       <form onSubmit={handleSend}>
-        <input value={transactionValue} onChange={handleValueChange} />
-        <button type="submit">send</button>
+        Stored value: <input value={transactionValue} onChange={handleValueChange} />
+        <button type="submit">change</button>
       </form>
       <form onSubmit={handleRequest}>
-        <input value={requestValue} onChange={handleRequestValueChange} />
+        Request value: <input value={requestValue} onChange={handleRequestValueChange} />
         <button type="submit">request</button>
       </form>
       <div>The stored value is: {storageValue}</div>
