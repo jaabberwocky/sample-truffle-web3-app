@@ -27,20 +27,22 @@ contract("SimpleStorage", (accounts) => {
 
   it("...should get the balance of 0 by default", async () => {
     const simpleStorageInstance = await SimpleStorage.deployed();
+    const accounts = await web3.eth.getAccounts();
 
     // Get stored value
-    const balance = await simpleStorageInstance.getBalance();
+    const balance = await simpleStorageInstance.getBalance(accounts[0]);
 
     assert.equal(balance, 0, "The default balance value of 0 was not returned");
   });
 
   it("...should get the balance of 100 after requesting for it", async () => {
     const simpleStorageInstance = await SimpleStorage.deployed();
+    const accounts = await web3.eth.getAccounts();
 
     await simpleStorageInstance.request(100);
 
     // Get stored value
-    const balance = await simpleStorageInstance.getBalance();
+    const balance = await simpleStorageInstance.getBalance(accounts[0]);
 
     assert.equal(balance, 100, "The balance value of 100 was not returned");
   });

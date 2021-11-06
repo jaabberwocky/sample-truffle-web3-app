@@ -17,7 +17,7 @@ contract SimpleStorage {
         balance[msg.sender] = balance[msg.sender] + amount;
     }
 
-    function getBalance() external view returns (uint256) {
-        return balance[msg.sender];
+    function getBalance(address _addr) external view returns (uint256) {
+        return balance[_addr];
     }
 }
