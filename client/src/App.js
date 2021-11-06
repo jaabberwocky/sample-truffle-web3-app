@@ -7,6 +7,8 @@ import "./App.css";
 const App = () => {
   const [storageValue, setStorageValue] = useState(0);
   const [transactionValue, setTransactionValue] = useState(0);
+  const [requestValue, setRequestValue] = useState(0);
+  const [balance, setBalance] = useState(0);
   const [hasLoaded, setHasLoaded] = useState(false);
   const [accounts, setAccounts] = useState(null);
   const [instanceContract, setInstanceContract] = useState(null);
@@ -26,12 +28,15 @@ const App = () => {
       window.ethereum.on("accountsChanged", async function () {
         const newAccounts = await web3.eth.getAccounts();
         console.log("newAccounts:", newAccounts[0]);
-        setAccounts(newAccounts)
+        setAccounts(newAccounts);
       });
 
       // TODO: understand why we can't use instanceContract here
       const response = await instance.methods.get().call();
       setStorageValue(response);
+      const _balance = await instance.methods.balance(accounts[0]).call();
+      setBalance(_balance);
+
       setHasLoaded(true);
     }
     setContract();
@@ -51,6 +56,20 @@ const App = () => {
     setTransactionValue(event.target.value);
   };
 
+  const handleRequest = async (event) => {
+    event.preventDefault();
+    await instanceContract.methods
+      .request(requestValue)
+      .send({ from: accounts[0] });
+    const response = await instanceContract.methods.balance(accounts[0]).call();
+    setBalance(response);
+    setRequestValue(0);
+  };
+
+  const handleRequestValueChange = (event) => {
+    setRequestValue(event.target.value);
+  };
+
   return (
     <div className="App">
       <h1>Voting App</h1>
@@ -64,7 +83,12 @@ const App = () => {
         <input value={transactionValue} onChange={handleValueChange} />
         <button type="submit">send</button>
       </form>
+      <form onSubmit={handleRequest}>
+        <input value={requestValue} onChange={handleRequestValueChange} />
+        <button type="submit">request</button>
+      </form>
       <div>The stored value is: {storageValue}</div>
+      <div>Account balance: {balance}</div>
     </div>
   );
 };
